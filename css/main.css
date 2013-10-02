@@ -1,0 +1,168 @@
+/*
+ * Developed by Alireza Eskandarpour Shoferi (@cyletech)
+ * http://about.me/cyletech
+ *
+ * (c) 2013 Alireza Eskandarpour Shoferi
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ */
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: "Yekan";
+    src: url("../fonts/BYekan.eot");
+    src: url("../fonts/BYekan.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/BYekan.woff") format("woff"),
+         url("../fonts/BYekan.ttf") format("truetype");
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: "fontello";
+    src: url("../fonts/fontello.eot");
+    src: url("../fonts/fontello.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/fontello.woff") format('woff'),
+         url("../fonts/fontello.ttf") format('truetype'),
+         url("../fonts/fontello.svg#fontello") format('svg');
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #646464;
+    text-decoration: none;
+}
+
+body {
+    background-image: url('../img/Della Nott_2560x1600.jpg');
+    background-size: cover;
+    font-family: "Source Sans Pro","Yekan", sans-serif;
+}
+
+#accordion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -140px;
+    width: 280px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 4px 10px rgba(50, 50, 50, 0.3);
+    -moz-box-shadow: 0px 4px 10px rgba(50, 50, 50, 0.3);
+    box-shadow: 0px 4px 10px rgba(50, 50, 50, 0.3);
+    font-size: 0.875em;
+}
+
+#items {
+    padding: 18px 0;
+}
+
+#items > li > a {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    text-indent: 18px;
+    line-height: 39px;
+}
+
+#items > li > a::after {
+    position: absolute;
+    right: 30px;
+    margin-top: 2px;
+    font-family: "fontello";
+}
+
+#items > li > a::after {
+    right: 30px;
+    content: "\e801";
+}
+
+#items > li > a:lang(fa)::after {
+    right: auto;
+    left: 30px;
+    content: "\e802";
+}
+
+#items > li > a:hover, #items > li > a.expanded {
+    background-color: rgb(142,232,241);
+    color: #fff;
+    font-weight: 600;
+    -webkit-transition: background-color .4s ease-in-out;
+    -moz-transition: background-color .4s ease-in-out;
+    -o-transition: background-color .4s ease-in-out;
+    transition: background-color .4s ease-in-out;
+}
+
+#items > li > a.expanded::after {
+    content: "\e803";
+}
+
+.sub-items > li:first-child > a {
+    margin-top: 17px;
+    height: 34px;
+}
+
+.sub-items > li:last-child > a {
+    margin-bottom: 17px;
+    height: 34px;
+}
+
+.sub-items a {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 212px;
+    text-indent: 24px;
+    line-height: 39px;
+}
+
+.sub-items a {
+    border-left: 2px solid rgba(57, 198, 233, 0.3);
+}
+
+.sub-items a:lang(fa) {
+    border-right: 2px solid rgba(57, 198, 233, 0.3);
+    border-left: none;
+}
+
+.sub-items a.current {
+    position: relative;
+    color: rgb(142,232,241);
+    font-weight: 600;
+}
+
+.sub-items a.current::before {
+    position: absolute;
+    background-color: #fff;
+    color: rgb(142,232,241);
+    content: "\e800";
+    font-size: 0.656em;
+    font-family: "fontello";
+}
+
+.sub-items a.current::before {
+    left: -29px;
+}
+
+.sub-items a.current:lang(fa)::before {
+    right: -29px;
+    left: auto;
+}
+
+.sub-items > li:hover > a {
+    color: rgb(142,232,241);
+    -webkit-transition: color 0.4s ease-in-out;
+    -moz-transition: color 0.4s ease-in-out;
+    -o-transition: color 0.4s ease-in-out;
+    transition: color 0.4s ease-in-out;
+}
+
+.sub-items {
+    display: none;
+}
